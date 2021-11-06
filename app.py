@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restplus import Api, Resource, fields
 import RPi.GPIO as GPIO
 
-
 app = Flask(__name__)
 api = Api(app,
           version='1.0',

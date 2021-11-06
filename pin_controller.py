@@ -56,11 +56,14 @@ def pin_off(pin_num: int):
 
 
 def strobe_reg(period=0.5):
-    while True:
-        all_on()
-        time.sleep(period)
+    try:
+        while True:
+            all_on()
+            time.sleep(period)
+            all_off()
+            time.sleep(period)
+    except KeyboardInterrupt:
         all_off()
-        time.sleep(period)
 
 
 def strobe_rand(min_time=0, max_time=1.2):
